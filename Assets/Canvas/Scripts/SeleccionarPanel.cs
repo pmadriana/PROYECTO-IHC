@@ -17,6 +17,7 @@ public class SeleccionarPanel : MonoBehaviour
 
     public GameObject PanelEnemigo;
     public GameObject PanelDemo;
+    public GameObject video;
 
 
 
@@ -55,8 +56,11 @@ public class SeleccionarPanel : MonoBehaviour
     {
         if (VisibleDemo == false)
         {
+            video.GetComponent<DemoVideoScript>().startVideo = true;
+            Debug.Log("Inicio video");
             PanelDemo.SetActive(true);
             VisibleDemo = true;
+            
         }
     }
 

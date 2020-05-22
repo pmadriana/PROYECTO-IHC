@@ -45,7 +45,7 @@ public class EnemyT : MonoBehaviour
         animator.SetInteger("moving", 2);
         if (bool_s.activeSelf)
         {
-            StartCoroutine(showTextStart());
+            textPoderes.SetActive(true);
             bool_s.SetActive(false);
         }
     }
@@ -164,16 +164,6 @@ public class EnemyT : MonoBehaviour
 
     }
 
-    IEnumerator showTextStart()
-    {
-
-        textLanzar.SetActive(true); // Enable the text so it shows
-        yield return new WaitForSeconds(5);
-        textLanzar.SetActive(false); // Disable the text so it is hidden
-        textPoderes.SetActive(true);
-
-
-    }
 
     IEnumerator showTextGema()
     {

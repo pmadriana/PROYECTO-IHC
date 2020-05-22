@@ -9,6 +9,7 @@ public class GenerateRandomEnemy : DefaultTrackableEventHandler
     private ArrayList enemiesOnScreen = new ArrayList();
     public GameObject wallLimit;
     public GameObject Entrenamiento;
+    public bool tracking = false;
     protected override void OnTrackingFound()
     {
         if (mTrackableBehaviour)
@@ -16,6 +17,7 @@ public class GenerateRandomEnemy : DefaultTrackableEventHandler
             wallLimit.GetComponent<Collider>().enabled = true;
             InvokeRepeating("GenerateEnemies", 3.0f, 5.0f);
             //GenerateEnemies();
+            tracking = true;
         }
 
         if (OnTargetFound != null)
@@ -33,6 +35,7 @@ public class GenerateRandomEnemy : DefaultTrackableEventHandler
                      Destroy(child.gameObject);
                 }
             }
+            tracking = false;
                 
         }
     }

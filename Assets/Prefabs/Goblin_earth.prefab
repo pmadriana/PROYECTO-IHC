@@ -183,7 +183,7 @@ BoxCollider:
   m_GameObject: {fileID: 3240172699175424544}
   m_Material: {fileID: 0}
   m_IsTrigger: 0
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 2
   m_Size: {x: 1.0000005, y: 1, z: 1.0000005}
   m_Center: {x: -0.0000002384187, y: 0, z: -0.00000071525596}
@@ -1417,25 +1417,13 @@ MonoBehaviour:
   walk: 0
   type: earth
   life: 3
-  lifeBar: {fileID: 3240172699175424544}
-  Entrenamiento: {fileID: 1087846564927803891, guid: 2fe36ac7868c03a459fddee2acb03197,
-    type: 3}
   markerId: 
+  lifeBar: {fileID: 3240172699175424544}
   sonido_golpe: {fileID: 5962300019194210090, guid: d7a68a05832554740995a76bd6cc3544,
     type: 3}
   sonido_muerte: {fileID: 8504845022231497028, guid: 6b671d52ebf65d247abed26f7cfaadf4,
     type: 3}
   sonido_risa: {fileID: 1813236565757234007, guid: e7da832995d0e504c91df7c0b1c2a2ea,
-    type: 3}
-  textLanzar: {fileID: 2263987931792501285, guid: f66aa87ab7baf7449bb0be3e85457188,
-    type: 3}
-  textPoderes: {fileID: 658163941326041101, guid: 0cb91b26680c31549b914547c77f050b,
-    type: 3}
-  textGema: {fileID: 1320671938030876615, guid: a79e300e66173cb43ad8876d5e99ae2f,
-    type: 3}
-  textJuega: {fileID: 8671413502476467696, guid: a34a54f76f3f6f843854f908f94c5e50,
-    type: 3}
-  textMatar: {fileID: 8949993300768321336, guid: 7e17af9777ae408459410a45aec78918,
     type: 3}
 --- !u!136 &8001976572506531720
 CapsuleCollider:
