@@ -6,6 +6,7 @@ public class LimitObject : MonoBehaviour
 {
     public string markerId = null;
     public string objectTag;
+    public GameObject Entrenamiento;
     // Start is called before the first frame update
     void Start()
     {
@@ -20,32 +21,66 @@ public class LimitObject : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        if (!markerId.Equals("water"))
+        if (Entrenamiento.activeSelf)
         {
-            if (other.gameObject.CompareTag(objectTag) && other.gameObject.GetComponent<Enemy>().markerId.Equals(markerId)&& other.gameObject.name!="Wall")
+            if (!markerId.Equals("water"))
             {
-                Destroy(other.gameObject);
+                if (other.gameObject.CompareTag(objectTag) && other.gameObject.GetComponent<EnemyT>().markerId.Equals(markerId) && other.gameObject.name != "Wall")
+                {
+                    Destroy(other.gameObject);
+                }
             }
-        }
-        if (!markerId.Equals("fire"))
-        {
-            if (other.gameObject.CompareTag(objectTag) && other.gameObject.GetComponent<Enemy>().markerId.Equals(markerId) && other.gameObject.name != "Wall")
+            if (!markerId.Equals("fire"))
             {
-                Destroy(other.gameObject);
+                if (other.gameObject.CompareTag(objectTag) && other.gameObject.GetComponent<EnemyT>().markerId.Equals(markerId) && other.gameObject.name != "Wall")
+                {
+                    Destroy(other.gameObject);
+                }
             }
-        }
-        if (!markerId.Equals("rock"))
-        {
-            if (other.gameObject.CompareTag(objectTag) && other.gameObject.GetComponent<Enemy>().markerId.Equals(markerId) && other.gameObject.name != "Wall")
+            if (!markerId.Equals("rock"))
             {
-                Destroy(other.gameObject);
+                if (other.gameObject.CompareTag(objectTag) && other.gameObject.GetComponent<EnemyT>().markerId.Equals(markerId) && other.gameObject.name != "Wall")
+                {
+                    Destroy(other.gameObject);
+                }
+            }
+            else
+            {
+                if (other.gameObject.CompareTag(objectTag))
+                {
+                    Destroy(other.gameObject);
+                }
             }
         }
         else
         {
-            if (other.gameObject.CompareTag(objectTag))
+            if (!markerId.Equals("water"))
             {
-                Destroy(other.gameObject);
+                if (other.gameObject.CompareTag(objectTag) && other.gameObject.GetComponent<Enemy>().markerId.Equals(markerId) && other.gameObject.name != "Wall")
+                {
+                    Destroy(other.gameObject);
+                }
+            }
+            if (!markerId.Equals("fire"))
+            {
+                if (other.gameObject.CompareTag(objectTag) && other.gameObject.GetComponent<Enemy>().markerId.Equals(markerId) && other.gameObject.name != "Wall")
+                {
+                    Destroy(other.gameObject);
+                }
+            }
+            if (!markerId.Equals("rock"))
+            {
+                if (other.gameObject.CompareTag(objectTag) && other.gameObject.GetComponent<Enemy>().markerId.Equals(markerId) && other.gameObject.name != "Wall")
+                {
+                    Destroy(other.gameObject);
+                }
+            }
+            else
+            {
+                if (other.gameObject.CompareTag(objectTag))
+                {
+                    Destroy(other.gameObject);
+                }
             }
         }
         

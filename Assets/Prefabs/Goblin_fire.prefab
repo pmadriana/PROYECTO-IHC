@@ -1132,13 +1132,25 @@ MonoBehaviour:
   walk: 0
   type: fire
   life: 3
-  markerId: 
   lifeBar: {fileID: 7060078772313813161}
+  Entrenamiento: {fileID: 1087846564927803891, guid: 2fe36ac7868c03a459fddee2acb03197,
+    type: 3}
+  markerId: 
   sonido_golpe: {fileID: 5962300019194210090, guid: d7a68a05832554740995a76bd6cc3544,
     type: 3}
   sonido_muerte: {fileID: 8504845022231497028, guid: 6b671d52ebf65d247abed26f7cfaadf4,
     type: 3}
   sonido_risa: {fileID: 1813236565757234007, guid: e7da832995d0e504c91df7c0b1c2a2ea,
+    type: 3}
+  textLanzar: {fileID: 658163941326041101, guid: 0cb91b26680c31549b914547c77f050b,
+    type: 3}
+  textPoderes: {fileID: 8167256165462337069, guid: 4f32177b214568b4cb0e11608996b1f5,
+    type: 3}
+  textGema: {fileID: 1320671938030876615, guid: a79e300e66173cb43ad8876d5e99ae2f,
+    type: 3}
+  textJuega: {fileID: 8671413502476467696, guid: a34a54f76f3f6f843854f908f94c5e50,
+    type: 3}
+  textMatar: {fileID: 8949993300768321336, guid: 7e17af9777ae408459410a45aec78918,
     type: 3}
 --- !u!136 &6066142036872565209
 CapsuleCollider:
@@ -2000,7 +2012,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7060078772313813161}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.06, y: 5.09, z: -0.48}
+  m_LocalPosition: {x: -0.01, y: 0.33, z: 1.44}
   m_LocalScale: {x: 2.6999924, y: 0.22562413, z: 0.17176951}
   m_Children: []
   m_Father: {fileID: 7990585006216686698}
@@ -2291,8 +2303,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7505503966411623098}
   m_LocalRotation: {x: -0, y: 0.99997216, z: -0, w: -0.007465086}
-  m_LocalPosition: {x: 0.012, y: 5.813, z: -0.379}
-  m_LocalScale: {x: 0.41452366, y: 0.22953603, z: 0.19999212}
+  m_LocalPosition: {x: 0, y: 5.1912, z: -0.13}
+  m_LocalScale: {x: 0.3774654, y: 0.21980415, z: 0.34938622}
   m_Children: []
   m_Father: {fileID: 7990585006216686698}
   m_RootOrder: 4

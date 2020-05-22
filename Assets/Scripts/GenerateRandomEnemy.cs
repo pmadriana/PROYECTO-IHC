@@ -8,6 +8,7 @@ public class GenerateRandomEnemy : DefaultTrackableEventHandler
     public GameObject renderReference;
     private ArrayList enemiesOnScreen = new ArrayList();
     public GameObject wallLimit;
+    public GameObject Entrenamiento;
     protected override void OnTrackingFound()
     {
         if (mTrackableBehaviour)
@@ -40,8 +41,17 @@ public class GenerateRandomEnemy : DefaultTrackableEventHandler
         Vector3 pos = new Vector3(renderReference.transform.position.x, renderReference.transform.position.y, renderReference.transform.position.z);
         GameObject enemy = Instantiate(enemies[enemyId],pos, Quaternion.Euler(renderReference.transform.rotation.x, -453.0f, renderReference.transform.rotation.z));
         enemy.transform.parent = this.transform;
-        enemy.GetComponent<Enemy>().walk = true;
-        enemy.GetComponent<Enemy>().markerId = this.name;
+        if (Entrenamiento.activeSelf)
+        {
+            enemy.SetActive(true);
+            enemy.GetComponent<EnemyT>().walk = true;
+            enemy.GetComponent<EnemyT>().markerId = this.name;
+        }
+        else
+        {
+            enemy.GetComponent<Enemy>().walk = true;
+            enemy.GetComponent<Enemy>().markerId = this.name;
+        }
 
 
         enemiesOnScreen.Add(enemy);

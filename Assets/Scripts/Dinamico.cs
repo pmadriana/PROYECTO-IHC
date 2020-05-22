@@ -16,6 +16,7 @@ public class Dinamico : MonoBehaviour
     /*termina*/
 
     public GameObject[] userPowers;
+ 
     private int actualPowerIndex = 1;
     private bool shoot = false;
     private GameObject shootPower;

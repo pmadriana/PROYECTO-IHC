@@ -7,6 +7,7 @@ using UnityEngine.Windows.Speech;
 using System;
 using Vuforia;
 using UnityEngine.EventSystems;
+using UnityEngine.SceneManagement;
 public class Controlador : MonoBehaviour
 {
 
@@ -29,6 +30,7 @@ public class Controlador : MonoBehaviour
         actions.Add("Menu", BotonMenu);
         actions.Add("Calibrar", BotonCalibrar);
         actions.Add("Empezar", BotonEmpezar);
+        actions.Add("Entrenar", BotonEntrenar);
 
 
 
@@ -75,6 +77,11 @@ public class Controlador : MonoBehaviour
     public void BotonEmpezar()
     {
         Calibrar.SetActive(false);
+    }
+    public void BotonEntrenar()
+    {
+        SceneManager.LoadScene("EntrenamientoScene");
+
     }
     public void BotonSalir()
     {

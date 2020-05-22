@@ -1,30 +1,35 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
+
 using Vuforia;
 
 public class Enemy : MonoBehaviour
 {
     private Animator animator;
     private Vector3 originalPos;
+
     public bool walk = false;
     public string type;
     public int life = 3;
-    public string markerId;
     public GameObject lifeBar;
+    public string markerId;
 
     public GameObject sonido_golpe;
     public GameObject sonido_muerte;
     public GameObject sonido_risa;
+
+
     // Start is called before the first frame update
     void Start()
     {
         animator = GetComponent<Animator>();
         animator.SetInteger("battle", 1);
         animator.SetInteger("moving", 2);
-       
 
     }
+
 
     // Update is called once per frame
     void Update()
@@ -38,6 +43,8 @@ public class Enemy : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
+      
+
         GameObject obj = other.gameObject; //poder
         Debug.Log(obj.tag);
         if ( (obj.CompareTag("water") && type == "fire") || (obj.CompareTag("fire") && type == "earth") || (obj.CompareTag("rock") && type == "thunder"))
